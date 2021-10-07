@@ -10,13 +10,9 @@ public class Controller {
     @GetMapping("/reverse")
     public String reverseText(@RequestParam("text") String text){
 
-        StringBuilder sb = new StringBuilder(text);
-        sb.reverse();
-        String text2 = sb.toString();
-        System.out.println("Original string: " + text);
-        System.out.println("Reversed string: " + text2);
-
-        return text2;
+        StringBuilder stringBuilder = new StringBuilder(text);
+        stringBuilder.reverse();
+        return stringBuilder.toString();
     }
 
 }
